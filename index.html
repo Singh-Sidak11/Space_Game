@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders: Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Resources/alien_icon.png">
+</head>
+<body>
+    <audio id="aud" autoplay>
+        <source src="space.mp3">
+    </audio>
+    <button id="song" onclick="play()">🔊</button>
+    <div class="h1 heading">
+        <center><h1>👾 Space Invaders 👾</h1></center>
+    </div>
+    <div id="allthethings">
+        <div id="left"></div>
+        <a href="Easy/easy.html"><div id="easy"><p>EASY</p></div></a>
+        <a href="Medium/medium.html"><div id="medium"><p>MEDIUM</p></div></a>
+        <a href="Hard/hard.html"><div id="hard"><p>HARD</p></div></a>
+        <a href="about.html"><div id="credits"><p>ABOUT</p></div></a>
+        <div id="right"></div>
+        <div id="exit" onclick="self.close()"></div>
+        <div id="circle"></div>
+    </div>      
+    <script>
+        var audio=document.getElementById('aud');
+        var btn=document.getElementById('song');
+        var count=0;
+
+        function play(){
+            if(count==0)
+            {
+                count=1;
+                audio.play();
+                btn.innerHTML='🔊';
+            }
+            else{
+                count=0;
+                audio.pause();
+                btn.innerHTML='🔈';
+            }
+        }
+ 
+ </script>
+</body>
+</html>
