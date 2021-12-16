@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="icon" href="../Resources/alien_icon.png">
+</head>
+<body>
+    <div class="h1 heading">
+        <center><h1 id="score">👾 Your Score: 👾</h1></center>
+    </div>
+    <div id="allthethings">
+        <div id="left"></div>
+        <a href="../index.html"><div id="easy"><p>Return to main menu</p></div></a>
+        <a href="../Menu/index.html"><div id="medium"><p>Change Difficulty</p></div></a>
+        <a href="#" onclick="redirect()" id="page"><div id="hard"><p>Play again</p></div></a>
+        <a href="../About/about.html"><div id="credits"><p>About</p></div></a>
+        <div id="right"></div>
+        <button id="exit" onclick="self.close()"></button>
+        <div id="circle"></div>
+    </div>      
+    <script src="app.js"></script>
+</body>
+</html>

@@ -2,13 +2,37 @@
 	margin: 0;
 	padding: 0;
 }
+
+#song{
+	color: wheat;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	position: absolute;
+    font-size: 20px;
+	cursor: pointer;
+}
+
+#back{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+	border: none;
+	outline: none;
+	position: absolute;
+	left: 30px;
+    font-size: 20px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
 .container{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	/* border: 1px solid black; */
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../Resources/med_bg.jpg);
+	/* background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../Resources/try1.gif); */
+	background-image: url(../Resources/med_bg.gif);
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
@@ -54,11 +78,3 @@
 	/* background-color: red; */
 	background-image: url(../Resources/med_explode.gif);
 }
-button{
-	background-color: transparent;
-	border: none;
-	outline: none;
-	position: absolute;
-    font-size: 20px;
-}
-  

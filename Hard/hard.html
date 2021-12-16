@@ -9,10 +9,12 @@
   <link rel="icon" href="../Resources/alien_icon.png">
 </head>
 <body>
-  <audio id="aud">
-    <source src="space_sounds.mp3">
-</audio>
-<button id="song" onclick="play()">🔊</button>
+  <audio id="aud" loop autoplay>
+    <source src="../Resources/space_sounds.mp3">
+  </audio>
+  <button id="song" onclick="play()">🔊</button>
+  <a id="back" onclick="back()" href="#">↩️</a>
+  
   <div class="container">
     <h1 class="results">Score: 0</h1>
     <div class="grid"></div>

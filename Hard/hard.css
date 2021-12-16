@@ -2,6 +2,29 @@
 	margin: 0;
 	padding: 0;
 }
+
+#song{
+	color: wheat;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	position: absolute;
+    font-size: 20px;
+	cursor: pointer;
+}
+
+#back{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+	border: none;
+	outline: none;
+	position: absolute;
+	left: 30px;
+    font-size: 20px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
 .container{
 	display: flex;
 	align-items: center;
@@ -54,10 +77,3 @@
 .results{
 	color: white;
 }
-button{
-	background-color: transparent;
-	border: none;
-	outline: none;
-	position: absolute;
-	font-size: 20px;
-  }

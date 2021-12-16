@@ -1,3 +1,27 @@
+localStorage.setItem("storage",'3');
+var audio=document.getElementById('aud');
+var btn=document.getElementById('song');
+var count=0;
+function play()
+{
+  if(count==0)
+  {
+    count=1;
+    audio.play();
+    btn.innerHTML='🔊';
+  }
+  else
+  {
+    count=0;
+    audio.pause();
+    btn.innerHTML='🔈';
+  }
+}
+
+function back(){
+  document.getElementById("back").href="../Menu/index.html"; 
+  return false;
+}
 const grid = document.querySelector('.grid')
 const resultsDisplay = document.querySelector('.results')
 let currentShooterIndex = 562
@@ -7,10 +31,6 @@ let invadersId
 let goingRight = true
 let aliensRemoved = []
 let results = 0
-var audio=document.getElementById('aud');
-var btn=document.getElementById('song');
-var count=0;
-
 
 for (let i = 0; i < 625; i++) {
   const square = document.createElement('div')
@@ -85,22 +105,41 @@ function moveInvaders() {
   draw()
 
   if (squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
-    resultsDisplay.innerHTML = 'GAME OVER'
+    // resultsDisplay.innerHTML = 'GAME OVER';
     clearInterval(invadersId)
+    finish('lost');
   }
-
+  
   for (let i = 0; i < alienInvaders.length; i++) {
     if(alienInvaders[i] > (squares.length)) {
-      resultsDisplay.innerHTML = 'GAME OVER'
+      // resultsDisplay.innerHTML = 'GAME OVER'
       clearInterval(invadersId)
+      finish('lost');
     }
   }
   if (aliensRemoved.length === alienInvaders.length) {
-    resultsDisplay.innerHTML = 'YOU WIN'
+    // resultsDisplay.innerHTML = 'YOU WIN'
     clearInterval(invadersId)
+    finish('won');
   }
 }
-invadersId = setInterval(moveInvaders, 500)
+
+function finish(status){
+  if(status === 'lost'){
+    alert('Game Over. Click OK to see results')
+    localStorage.setItem("storage1",results);  
+    localStorage.setItem("storage2",status);  
+    location.replace("../Game Over/menu.html");
+  }
+  else{
+    alert('Game Over. Click OK to see results')
+    localStorage.setItem("storage1",results);    
+    localStorage.setItem("storage2",status);    
+    location.replace("../Game Over/menu.html");
+  }
+}
+
+invadersId = setInterval(moveInvaders, 520)
 
 function shoot(e) {
   let laserId
@@ -130,21 +169,6 @@ function shoot(e) {
   switch(e.key) {
     case 'ArrowUp':
       laserId = setInterval(moveLaser, 100)
-  }
-}
-function play()
-{
-  if(count==0)
-  {
-   count=1;
-   audio.play();
-   btn.innerHTML='🔊';
-  }
-  else
-  {
-   count=0;
-   audio.pause();
-   btn.innerHTML='🔈';
   }
 }
 

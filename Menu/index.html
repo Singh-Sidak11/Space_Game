@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders: Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../Resources/alien_icon.png">
+</head>
+<body>
+    <audio id="aud" loop autoplay>
+        <source src="../Resources/space.mp3" type="audio/mpeg">
+    </audio>
+    <button id="song" onclick="play()">🔊</button>
+
+    <div class="h1 heading">
+        <center><h1>👾 Main Menu 👾</h1></center>
+    </div>
+    <div id="allthethings">
+        <div id="left"></div>
+        <a href="../Easy/easy.html"><div id="easy"><p>EASY</p></div></a>
+        <a href="../Medium/medium.html"><div id="medium"><p>MEDIUM</p></div></a>
+        <a href="../Hard/hard.html"><div id="hard"><p>HARD</p></div></a>
+        <a href="../About/about.html"><div id="credits"><p>ABOUT</p></div></a>
+        <div id="right"></div>
+        <div id="exit" onclick="self.close()"></div>
+        <div id="circle"></div>
+    </div>      
+    <script src="main.js"></script>
+</body>
+</html>
